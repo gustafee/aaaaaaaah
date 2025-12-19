@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Click Game</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #222;
+            font-family: Arial, sans-serif;
+        }
+
+        .game-window {
+            width: 50vw;
+            height: 50vh;
+            background-color: #333;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .counter {
+            font-size: 64px;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .circle-button {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: none;
+            background-color: #4CAF50;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .circle-button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="game-window">
+        <div class="counter" id="counter">0</div>
+        <button class="circle-button" id="button">+</button>
+    </div>
+
+    <script>
+        let count = 0;
+
+        const counterElement = document.getElementById("counter");
+        const button = document.getElementById("button");
+
+        button.addEventListener("click", () => {
+            count++;
+            counterElement.textContent = count;
+        });
+    </script>
+
+</body>
+</html>
